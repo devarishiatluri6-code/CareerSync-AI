@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analysis | CareerSync AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="navbar">
+      <div class="brand">CareerSync AI</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Analyze Resume</a>
+        <a href="interview.html">Interview Prep</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
+
+    <main class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Resume Analysis</span>
+        <h2>Actionable insights from your last resume upload.</h2>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="stat-card glass-card">
+          <h3>Match Score</h3>
+          <div class="circle-chart"><span id="matchScore">--%</span></div>
+        </div>
+        <div class="stat-card glass-card">
+          <h3>ATS Score</h3>
+          <div class="circle-chart"><span id="atsScore">--%</span></div>
+        </div>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="analysis-card glass-card">
+          <h4>Strengths</h4>
+          <ul id="strengthsList"></ul>
+        </div>
+        <div class="analysis-card glass-card">
+          <h4>Missing Skills</h4>
+          <ul id="missingSkillsList"></ul>
+        </div>
+      </div>
+
+      <div class="analysis-card glass-card">
+        <h4>Suggestions</h4>
+        <ul id="suggestionsList"></ul>
+      </div>
+
+      <div class="analysis-card glass-card">
+        <h4>Resume Summary</h4>
+        <p id="summaryText">Your resume summary will appear here after analysis.</p>
+      </div>
+
+      <div class="analysis-actions">
+        <button class="btn btn-primary" id="downloadReport">Download Report</button>
+        <a class="btn btn-secondary" href="interview.html">Generate Interview Questions</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>CareerSync AI &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/analysis.js"></script>
+</body>
+</html>

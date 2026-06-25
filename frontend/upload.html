@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Resume | CareerSync AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="navbar">
+      <div class="brand">CareerSync AI</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Analyze Resume</a>
+        <a href="interview.html">Interview Prep</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
+
+    <main class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Resume Upload</span>
+        <h2>Upload your resume and target the right role.</h2>
+      </div>
+
+      <div class="upload-panel glass-card">
+        <div class="upload-area" id="uploadArea">
+          <p>Drag & drop your resume here, or browse files.</p>
+          <button class="btn btn-secondary" id="browseButton">Browse File</button>
+          <input type="file" id="resumeInput" accept=".pdf,.docx,.txt" hidden />
+        </div>
+
+        <div class="upload-form">
+          <div class="form-group">
+            <label for="selectedFile">Selected File</label>
+            <div id="selectedFile" class="file-preview">No file selected</div>
+          </div>
+          <div class="form-group">
+            <label for="roleSelect">Target Job Role</label>
+            <select id="roleSelect">
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Backend Developer">Backend Developer</option>
+              <option value="Full Stack Developer">Full Stack Developer</option>
+              <option value="Data Analyst">Data Analyst</option>
+              <option value="AI/ML Engineer">AI/ML Engineer</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="analyzeButton">Analyze Resume</button>
+
+          <div class="progress-block" id="progressBlock" hidden>
+            <div class="spinner"></div>
+            <span id="progressText">Uploading resume...</span>
+          </div>
+          <div class="toast" id="toast"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>CareerSync AI &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/upload.js"></script>
+</body>
+</html>

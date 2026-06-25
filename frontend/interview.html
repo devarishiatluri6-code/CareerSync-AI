@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Prep | CareerSync AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="navbar">
+      <div class="brand">CareerSync AI</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Analyze Resume</a>
+        <a href="interview.html">Interview Prep</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
+
+    <main class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Interview Questions</span>
+        <h2>Practice questions tailored to your career goal.</h2>
+      </div>
+
+      <div class="qa-grid">
+        <div class="qa-card glass-card">
+          <div class="qa-header">
+            <h4>Technical Questions</h4>
+            <button class="btn btn-tertiary" data-copy="technical">Copy</button>
+          </div>
+          <ul id="technicalList"></ul>
+        </div>
+        <div class="qa-card glass-card">
+          <div class="qa-header">
+            <h4>Behavioral Questions</h4>
+            <button class="btn btn-tertiary" data-copy="behavioral">Copy</button>
+          </div>
+          <ul id="behavioralList"></ul>
+        </div>
+        <div class="qa-card glass-card">
+          <div class="qa-header">
+            <h4>HR Questions</h4>
+            <button class="btn btn-tertiary" data-copy="hr">Copy</button>
+          </div>
+          <ul id="hrList"></ul>
+        </div>
+      </div>
+
+      <div class="analysis-actions">
+        <button class="btn btn-primary" id="downloadQuestions">Download Questions</button>
+        <a class="btn btn-secondary" href="roadmap.html">Create Roadmap</a>
+      </div>
+
+      <div class="toast" id="toast"></div>
+    </main>
+
+    <footer class="footer">
+      <p>CareerSync AI &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/interview.js"></script>
+</body>
+</html>

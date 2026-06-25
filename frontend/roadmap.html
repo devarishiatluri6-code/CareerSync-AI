@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Roadmap | CareerSync AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="navbar">
+      <div class="brand">CareerSync AI</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Analyze Resume</a>
+        <a href="interview.html">Interview Prep</a>
+        <a href="roadmap.html">Roadmap</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle">Dark Mode</button>
+    </header>
+
+    <main class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Career Roadmap</span>
+        <h2>A practical learning path built around your role.</h2>
+      </div>
+
+      <div class="timeline-card glass-card">
+        <h4>Learning Timeline</h4>
+        <ol id="timelineList" class="timeline-list"></ol>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card glass-card">
+          <h4>Skills To Learn</h4>
+          <ul id="skillsList"></ul>
+        </div>
+        <div class="roadmap-card glass-card">
+          <h4>Recommended Certifications</h4>
+          <ul id="certificationsList"></ul>
+        </div>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card glass-card">
+          <h4>Projects To Build</h4>
+          <ul id="projectsList"></ul>
+        </div>
+        <div class="roadmap-card glass-card">
+          <h4>Learning Resources</h4>
+          <ul id="resourcesList"></ul>
+        </div>
+      </div>
+
+      <div class="analysis-actions">
+        <button class="btn btn-primary" id="downloadRoadmap">Download Roadmap</button>
+        <a class="btn btn-secondary" href="upload.html">New Analysis</a>
+      </div>
+
+      <div class="toast" id="toast"></div>
+    </main>
+
+    <footer class="footer">
+      <p>CareerSync AI &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/roadmap.js"></script>
+</body>
+</html>
