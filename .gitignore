@@ -3,5 +3,6 @@ venv/
 *.pyc
 .env
 backend/uploads/
+uploads/
 .vscode/
 .idea/

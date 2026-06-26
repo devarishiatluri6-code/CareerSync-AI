@@ -1,7 +1,7 @@
 from pathlib import Path
 from uuid import uuid4
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from werkzeug.utils import secure_filename
 
 from services.analyzer import analyze_resume, get_supported_roles, is_supported_role
@@ -11,6 +11,7 @@ from services.roadmap_generator import generate_roadmap
 
 
 BASE_DIR = Path(__file__).resolve().parent
+FRONTEND_FOLDER = BASE_DIR.parent / "frontend"
 UPLOAD_FOLDER = BASE_DIR / "uploads"
 MAX_UPLOAD_SIZE_MB = 8
 
@@ -28,6 +29,27 @@ def create_app():
         response.headers["Access-Control-Allow-Headers"] = "Content-Type"
         response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
         return response
+
+    @app.get("/")
+    def serve_home():
+        if (FRONTEND_FOLDER / "index.html").exists():
+            return send_from_directory(FRONTEND_FOLDER, "index.html")
+
+        return jsonify(
+            {
+                "message": "CareerSync AI backend is running.",
+                "health_url": "/api/health",
+            }
+        )
+
+    @app.get("/<path:filename>")
+    def serve_frontend_file(filename):
+        frontend_file = FRONTEND_FOLDER / filename
+
+        if frontend_file.exists() and frontend_file.is_file():
+            return send_from_directory(FRONTEND_FOLDER, filename)
+
+        return _error("Page or API endpoint not found.", 404)
 
     @app.get("/api/health")
     def health_check():
